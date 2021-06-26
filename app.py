@@ -1,4 +1,4 @@
-$pip install neuralprophet.[live]
+pip install neuralprophet.[live]
 
 import streamlit as st
 import pandas as pd
@@ -11,7 +11,7 @@ import base64
 from neuralprophet import NeuralProphet
 from neuralprophet import set_random_seed
 
-st.title('📈 Automated Time Series Forecasting')
+st.title('📈 Automated FOREX USD-AUD Forecasting')
 
 """
 This data app uses Facebook's open-source Prophet library to automatically generate future forecast values from an imported dataset.
