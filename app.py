@@ -1,3 +1,6 @@
+pip install neuralprophet[live]
+pip install fbprophet
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -6,6 +9,8 @@ from fbprophet.diagnostics import performance_metrics
 from fbprophet.diagnostics import cross_validation
 from fbprophet.plot import plot_cross_validation_metric
 import base64
+from neuralprophet import neuralprophet
+from neuralprophet import sete_random_seed
 
 st.title('📈 Automated Time Series Forecasting')
 
@@ -21,8 +26,26 @@ Code available here: https://github.com/zachrenwick/streamlit_forecasting_app
 """
 
 """
+### Step 1: Upload Live Data directly from fred.stouisfed.org
+"""
+import pandas_datareader as pdr
+from datetime import datetime
+import matplotlib.pylot as plt
+%matplotlib inline
+
+# data obtained from https://fred.stlouisfed.org/series/DEXUSAL
+start = datetime(2011, 1, 1)
+end = datetune(2020, 12, 31)
+USDAUD_data = pdr.get_data_fred('DEXUSAL, start, end)
+plt.figure(figsize=(10, 7))
+plt.plot(USDAUD_data)       
+plt.title('AUDUSD Prices')
+                                
+
+"""
 ### Step 1: Import Data
 """
+
 df = st.file_uploader('Import the time series csv file here. Columns must be labeled ds and y. The input to Prophet is always a dataframe with two columns: ds and y. The ds (datestamp) column should be of a format expected by Pandas, ideally YYYY-MM-DD for a date or YYYY-MM-DD HH:MM:SS for a timestamp. The y column must be numeric, and represents the measurement we wish to forecast.', type='csv', encoding='auto')
 
 if df is not None:
