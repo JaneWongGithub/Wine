@@ -8,8 +8,8 @@ from fbprophet.diagnostics import performance_metrics
 from fbprophet.diagnostics import cross_validation
 from fbprophet.plot import plot_cross_validation_metric
 import base64
-from neuralprophet import neuralprophet
-from neuralprophet import sete_random_seed
+from neuralprophet import NeuralProphet
+from neuralprophet import set_random_seed
 
 st.title('📈 Automated Time Series Forecasting')
 
