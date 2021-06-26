@@ -1,5 +1,6 @@
-import fbprophet
-import neuralprophet
+pip install fbprophet
+pip install neuralprophet
+
 import streamlit as st
 import pandas as pd
 import numpy as np
