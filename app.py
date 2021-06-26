@@ -30,7 +30,7 @@ Code available here: https://github.com/zachrenwick/streamlit_forecasting_app
 import pandas_datareader as pdr
 from datetime import datetime
 import matplotlib.pylot as plt
-%matplotlib inline
+# %matplotlib inline
 
 # data obtained from https://fred.stlouisfed.org/series/DEXUSAL
 start = datetime(2011, 1, 1)
