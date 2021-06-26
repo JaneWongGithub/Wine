@@ -1,5 +1,5 @@
-!pip install neuralprophet[live]
-!pip install fbprophet
+$pip install neuralprophet[live]
+$pip install fbprophet
 
 import streamlit as st
 import pandas as pd
