@@ -35,7 +35,7 @@ import matplotlib.pylot as plt
 # data obtained from https://fred.stlouisfed.org/series/DEXUSAL
 start = datetime(2011, 1, 1)
 end = datetime(2020, 12, 31)
-USDAUD_data = pdr.get_data_fred('DEXUSAL, start, end)
+USDAUD_data = pdr.get_data_fred('DEXUSAL', start, end)
 plt.figure(figsize=(10, 7))
 plt.plot(USDAUD_data)       
 plt.title('AUDUSD Prices')
